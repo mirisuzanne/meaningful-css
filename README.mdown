@@ -37,8 +37,11 @@ In 2008, [Natalie Downe][natalie] gave a presentation titled "[CSS Systems][syst
 
 I'm not going to bore you with details, I'm going to tell you why you should care. The details you can learn better on your own time. I'll happily take questions throughout, and I'd love to talk with anyone afterwards.
 
+Check out the [demos][demo].
+
 [natalie]: http://lanyrd.com/profile/natbat/
 [systems]: http://www.slideshare.net/nataliedowne/css-systems-presentation
+[demo]: http://ericam.github.com/meaningful-css/
 
 Summary
 -----------
