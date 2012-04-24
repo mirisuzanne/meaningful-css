@@ -10,7 +10,7 @@ Social */
   a { display: block; }
 }
 
-a[href*='github'] {
+.social a[href*='github'] {
   background: image-url('social/github.png') no-repeat left;
   min-height: image-height('social/github.png');
   padding-left: image-width('social/github.png') + 6px; 
