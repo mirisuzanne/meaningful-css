@@ -842,7 +842,9 @@ We got it started, now take it home, flesh it out, and share your work. Fill in 
 
 _Thank You_.
 
-Other resources:
+Other resources
+---------------
+
 * [35 Great Resources for Compass and Sass](http://fuelyourcoding.com/35-great-resources-for-compass-and-sass/)
 * [The Sass Way](http://thesassway.com/)
 * [Compass Google Group](groups.google.com/group/compass-users)
