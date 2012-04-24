@@ -1,0 +1,184 @@
+/* ---------------------------------------------------------------------------
+Root */
+
+html { 
+  @extend .sans; 
+  @include background($base3 image-url('noise.png') repeat);
+  color: $base;
+  min-height: 100%;
+}
+
+@include establish-baseline;
+body { line-height: $base-rhythm-unit; }
+
+/* ---------------------------------------------------------------------------
+Links */
+
+$link: "&:link, &:visited";
+$focus: "&:focus, &:hover, &:active";
+
+@mixin focus-default {
+  outline: thin dotted $accent;
+}
+
+@mixin no-style-link {
+  &:link, &:visited, &:focus, &:hover, &:active {
+    color: inherit;
+  }
+}
+
+a {
+  &:hover, &:active {
+    outline: none;
+  }
+  #{$link} {
+    color: $alt;
+    text-decoration: none;
+  }
+  #{$focus} {
+    color: $accent;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+Headings */
+
+h1 {
+  @include adjust-font-size-to($medpx,1);
+}
+
+h1, h2 {
+  @extend .allcaps;
+}
+
+h3 {
+  @include trailer;
+  font-weight: bold;
+}
+
+h4, h5, h6 {
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------------------------
+Inline */
+
+cite, em, dfn, address, i {
+  font-style: italic;
+}
+
+strong, dfn, b {
+  font-weight: bold;
+}
+
+sup, sub {
+  position: relative;
+  font-size: smaller;
+  line-height: 0;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+mark {
+  background: #ffff99;
+  background-color: rgba(yellow, 0.5);
+  text-shadow: none;
+}
+
+small {
+  @include adjust-font-size-to(12px);
+}
+
+q {
+  font-style: italic;
+  em {
+    font-style: normal;
+  }
+}
+
+pre, code, tt {
+  @extend .mono;
+}
+
+/* ---------------------------------------------------------------------------
+Block */
+
+p {
+  @include trailer;
+}
+
+pre {
+  padding: rhythm();
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+blockquote {
+  padding: rhythm();
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------------------------
+Replaced */
+
+figure {
+  img, object, embed {
+    vertical-align: top;
+    max-width: 100%;
+  }
+}
+
+.lt-ie8 {
+  img {
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+Lists */
+
+@mixin no-style-list {
+  @include reset-box-model;
+  @include no-bullets;
+}
+
+ol, ul, dd {
+  margin-left: rhythm();
+  margin-bottom: rhythm();
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: disc;
+  nav & {
+    @include no-style-list;
+  }
+}
+
+dt {
+  @include leader;
+}

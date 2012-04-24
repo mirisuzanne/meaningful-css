@@ -1,0 +1,8 @@
+// ---------------------------------------------------------------------------
+// Helpers
+
+.sans { @include sans; }
+.cond { @include cond; }
+
+.allcaps { text-transform: uppercase; }
+.smallcaps { font-variant: small-caps; }

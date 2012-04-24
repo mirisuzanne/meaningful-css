@@ -1,0 +1,81 @@
+// ---------------------------------------------------------------------------
+// Settings
+
+$ie       : 'lt-ie9';
+
+$s-layout : 4;
+$small    : $s-layout;
+
+$m-break  : 40em;
+$m-layout : 10;
+$medium   : $m-break $m-layout $ie;
+
+/* ---------------------------------------------------------------------------
+Layout */
+
+// body { @include baseline-grid-background; }
+.container { @include container($small,$medium); }
+
+[role="banner"], [role="main"] {
+  @include full;
+  @include padding-leader;
+  @include padding-trailer;
+  @include at-breakpoint($medium) {
+    @include full;
+  }
+}
+
+[role="banner"] {
+  @extend .cond;
+  h1 {
+    b {
+      @include adjust-font-size-to($largepx,1.5,$medpx);
+      display: block;
+    }
+  }
+  h2 {
+    b { font-weight: bold; }
+  }
+}
+
+[role="navigation"] {
+  @extend .cond;
+  @extend .allcaps;
+  padding: rhythm(.25) 0;
+  background: rgba($base02,$xxsmall);
+  font-weight: bold;
+
+  > ul {
+    @include inline-block-list;
+    @include full;
+    @include at-breakpoint($medium) {
+      @include full;
+    }
+    > li {
+      margin-right: rhythm();
+    }
+  }
+  a {
+    #{$link} { color: $base3; }
+    #{$focus} { color: $base01; }
+  }
+}
+
+[role="contentinfo"] {
+  @extend .cond;
+  margin: rhythm(3) 0 rhythm(1);
+  color: $base1;
+  a {
+    #{$link} { 
+      color: $base01; 
+      font-weight: bold; 
+    }
+    #{$focus} { color: $alt; }
+  }
+  > p {
+    @include full;
+    @include at-breakpoint($medium) {
+      @include full;
+    }
+  }
+}

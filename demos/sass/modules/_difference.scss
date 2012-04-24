@@ -1,0 +1,81 @@
+// WARNING
+// This code requires an unreleased version of Susy!
+// Coming soon!
+
+// ---------------------------------------------------------------------------
+// SETUP
+
+$legacy-support-for-ie6     : true;
+
+.grid-element { min-height: rhythm(3); }
+.size1of2 { background: $violet; }
+.size1of5 { background: $cyan; }
+.size1of3 { background: $orange; }
+.full.grid-element { background: $magenta; }
+.grid  h4 { 
+    padding: rhythm(.5,16px);
+    font-weight: bold;
+    font-style: normal;
+    color: $base3;
+  }
+
+// ---------------------------------------------------------------------------
+// GRID
+
+.susy {
+  @include container(4,$medium);
+  [role="main"] { padding-bottom: 0; }
+}
+
+.grid {
+  padding: rhythm(1) 0;
+  @include pie-clearfix;
+  background: $base2;
+
+  // 4-column grid with a max-width of 50em
+  @include at-breakpoint(4 $m-break) {
+    > div {
+      @include full;
+    }
+  }
+
+  @include at-breakpoint($medium) {
+    > .size1of5 {
+      @include columns(2);
+      min-height: rhythm(9);
+      &:first-child { @include alpha; }
+      ~ .size1of5 { @include omega; }
+    }
+    .size3of5 {
+      @include columns(6);
+      > .size1of2 {
+        @include columns(3,6);
+        + .size1of2 { @include omega(6); }
+      }
+      > .full {
+        @include full(6);
+        background: none;
+      }
+    }
+  
+    .full {
+      .size1of3 {
+        @include columns(2,6);
+        min-height: rhythm(6);
+      }
+      .size2of3 {
+        @include columns(4 omega, 6);
+      }
+    }
+
+    .size2of3 {
+      .size1of2 {
+        @include columns(2,4);
+        + .size1of2 { @include omega(4); }
+      }
+      .full {
+        @include full(4);
+      }
+    }  
+  }
+}

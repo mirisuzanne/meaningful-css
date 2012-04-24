@@ -1,0 +1,226 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+/* Web Fonts from fontspring.com  All OpenType features and all extended glyphs have been removed. Fully installable fonts can be purchased at http://www.fontspring.com  The fonts included in this stylesheet are subject to the End User License you purchased from Fontspring. The fonts are protected under domestic and international trademark and  copyright law. You are prohibited from modifying, reverse engineering, duplicating, or distributing this font software.  (c) 2010 Fontspring     The fonts included are copyrighted by the vendor listed below.  Vendor:      FontSite Inc. License URL: http://www.fontspring.com/fflicense/fontsite   */
+@font-face { font-family: "FranklinGothicFS"; src: url('../fonts/FranklinGothic-Book-webfont.eot'); src: url('../fonts/FranklinGothic-Book-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-Book-webfont.woff') format('woff'), url('../fonts/FranklinGothic-Book-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-Book-webfont.svg#webfont') format('svg'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "FranklinGothicFS"; src: url('../fonts/FranklinGothic-BookIt-webfont.eot'); src: url('../fonts/FranklinGothic-BookIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-BookIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-BookIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-BookIt-webfont.svg#webfont') format('svg'); font-weight: normal; font-style: italic; }
+
+@font-face { font-family: "FranklinGothicFS"; src: url('../fonts/FranklinGothic-Med-webfont.eot'); src: url('../fonts/FranklinGothic-Med-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-Med-webfont.woff') format('woff'), url('../fonts/FranklinGothic-Med-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-Med-webfont.svg#webfont') format('svg'); font-weight: bold; font-style: normal; }
+
+@font-face { font-family: "FranklinGothicFS"; src: url('../fonts/FranklinGothic-MedIt-webfont.eot'); src: url('../fonts/FranklinGothic-MedIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-MedIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-MedIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-MedIt-webfont.svg#webfont') format('svg'); font-weight: bold; font-style: italic; }
+
+@font-face { font-family: "FranklinGothicFSCd"; src: url('../fonts/FranklinGothic-Cd-webfont.eot'); src: url('../fonts/FranklinGothic-Cd-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-Cd-webfont.woff') format('woff'), url('../fonts/FranklinGothic-Cd-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-Cd-webfont.svg#webfont') format('svg'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "FranklinGothicFSCd"; src: url('../fonts/FranklinGothic-CdIt-webfont.eot'); src: url('../fonts/FranklinGothic-CdIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-CdIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-CdIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-CdIt-webfont.svg#webfont') format('svg'); font-weight: normal; font-style: italic; }
+
+@font-face { font-family: "FranklinGothicFSCd"; src: url('../fonts/FranklinGothic-MedCd-webfont.eot'); src: url('../fonts/FranklinGothic-MedCd-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-MedCd-webfont.woff') format('woff'), url('../fonts/FranklinGothic-MedCd-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-MedCd-webfont.svg#webfont') format('svg'); font-weight: bold; font-style: normal; }
+
+@font-face { font-family: "FranklinGothicFSCd"; src: url('../fonts/FranklinGothic-MedCdIt-webfont.eot'); src: url('../fonts/FranklinGothic-MedCdIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-MedCdIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-MedCdIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-MedCdIt-webfont.svg#webfont') format('svg'); font-weight: bold; font-style: italic; }
+
+/* ---------------------------------------------------------------------------
+Root */
+html { background: #fdf6e3 url('../images/noise.png?1333395141') repeat; color: #657b83; min-height: 100%; }
+
+html { font-size: 100%; line-height: 1.5em; }
+
+body { line-height: 1.5em; }
+
+/* ---------------------------------------------------------------------------
+Links */
+a:hover, a:active { outline: none; }
+a:link, a:visited { color: #dc322f; text-decoration: none; }
+a:focus, a:hover, a:active { color: #268bd2; }
+
+/* ---------------------------------------------------------------------------
+Headings */
+h1 { font-size: 1.5em; line-height: 1em; }
+
+h3 { margin-bottom: 1.5em; font-weight: bold; }
+
+h4, h5, h6 { font-style: italic; }
+
+/* ---------------------------------------------------------------------------
+Inline */
+cite, em, dfn, address, i { font-style: italic; }
+
+strong, dfn, b { font-weight: bold; }
+
+sup, sub { position: relative; font-size: smaller; line-height: 0; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+abbr, acronym { border-bottom: 1px dotted; cursor: help; }
+
+ins { text-decoration: underline; }
+
+del { text-decoration: line-through; }
+
+mark { background: #ffff99; background-color: rgba(255, 255, 0, 0.5); text-shadow: none; }
+
+small { font-size: 0.75em; line-height: 2em; }
+
+q { font-style: italic; }
+q em { font-style: normal; }
+
+/* ---------------------------------------------------------------------------
+Block */
+p { margin-bottom: 1.5em; }
+
+pre { padding: 1.5em; white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word; }
+
+blockquote { padding: 1.5em; font-style: italic; }
+
+/* ---------------------------------------------------------------------------
+Replaced */
+figure img, figure object, figure embed { vertical-align: top; max-width: 100%; }
+
+.lt-ie8 img { -ms-interpolation-mode: bicubic; }
+
+/* ---------------------------------------------------------------------------
+Lists */
+ol, ul, dd { margin-left: 1.5em; margin-bottom: 1.5em; }
+
+ol { list-style-type: decimal; }
+
+ul { list-style-type: disc; }
+nav ul { margin: 0; padding: 0; border: 0; list-style: none; }
+nav ul li { list-style-image: none; list-style-type: none; margin-left: 0; }
+
+dt { margin-top: 1.5em; }
+
+.sans, html { font-family: "FranklinGothicFSBook", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+.cond, [role="banner"], [role="navigation"], [role="contentinfo"] { font-family: "FranklinGothicFSCd", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+.allcaps, h1, h2, [role="navigation"] { text-transform: uppercase; }
+
+.smallcaps { font-variant: small-caps; }
+
+/* ---------------------------------------------------------------------------
+Layout */
+.container { *zoom: 1; margin-left: auto; margin-right: auto; width: 21em; max-width: 100%; }
+.container:after { content: ""; display: table; clear: both; }
+@media (min-width: 40em) { .container { *zoom: 1; margin-left: auto; margin-right: auto; width: 51em; max-width: 100%; }
+  .container:after { content: ""; display: table; clear: both; } }
+.lt-ie9 .container { *zoom: 1; margin-left: auto; margin-right: auto; width: 51em; max-width: 100%; }
+.lt-ie9 .container:after { content: ""; display: table; clear: both; }
+
+[role="banner"], [role="main"] { clear: both; margin-left: 4.762%; margin-right: 4.762%; padding-top: 1.5em; padding-bottom: 1.5em; }
+@media (min-width: 40em) { [role="banner"], [role="main"] { clear: both; margin-left: 1.961%; margin-right: 1.961%; } }
+.lt-ie9 [role="banner"], .lt-ie9 [role="main"] { clear: both; margin-left: 1.961%; margin-right: 1.961%; }
+
+[role="banner"] h1 b { font-size: 1.5em; line-height: 1em; display: block; }
+[role="banner"] h2 b { font-weight: bold; }
+
+[role="navigation"] { padding: 0.375em 0; background: rgba(7, 54, 66, 0.296); font-weight: bold; }
+[role="navigation"] > ul { margin: 0; padding: 0; border: 0; overflow: hidden; *zoom: 1; clear: both; margin-left: 4.762%; margin-right: 4.762%; }
+[role="navigation"] > ul li { list-style-image: none; list-style-type: none; margin-left: 0; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; white-space: nowrap; }
+[role="navigation"] > ul li { *display: inline; }
+@media (min-width: 40em) { [role="navigation"] > ul { clear: both; margin-left: 1.961%; margin-right: 1.961%; } }
+.lt-ie9 [role="navigation"] > ul { clear: both; margin-left: 1.961%; margin-right: 1.961%; }
+[role="navigation"] > ul > li { margin-right: 1.5em; }
+[role="navigation"] a:link, [role="navigation"] a:visited { color: #fdf6e3; }
+[role="navigation"] a:focus, [role="navigation"] a:hover, [role="navigation"] a:active { color: #586e75; }
+
+[role="contentinfo"] { margin: 4.5em 0 1.5em; color: #93a1a1; }
+[role="contentinfo"] a:link, [role="contentinfo"] a:visited { color: #586e75; font-weight: bold; }
+[role="contentinfo"] a:focus, [role="contentinfo"] a:hover, [role="contentinfo"] a:active { color: #dc322f; }
+[role="contentinfo"] > p { clear: both; margin-left: 4.762%; margin-right: 4.762%; }
+@media (min-width: 40em) { [role="contentinfo"] > p { clear: both; margin-left: 1.961%; margin-right: 1.961%; } }
+.lt-ie9 [role="contentinfo"] > p { clear: both; margin-left: 1.961%; margin-right: 1.961%; }
+
+/* ---------------------------------------------------------------------------
+Meaning */
+.meaning { -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; -ms-border-radius: 0.5em; -o-border-radius: 0.5em; border-radius: 0.5em; margin: 3em 0.75em; padding: 1.5em; background: #d33682; color: #080205; }
+.meaning > h3 { -moz-border-radius-topleft: 0.5em; -webkit-border-top-left-radius: 0.5em; border-top-left-radius: 0.5em; -moz-border-radius-topright: 0.5em; -webkit-border-top-right-radius: 0.5em; border-top-right-radius: 0.5em; margin: -1.5em; margin-bottom: 1.5em; padding: 1.5em; background: rgba(8, 2, 5, 0.5); color: #d33682; }
+
+/* ---------------------------------------------------------------------------
+Social */
+.social-sprite, .social-dribbble, a[href*='dribbble'], .social-github, .social-stackoverflow, a[href*='stackoverflow'], .social-twitter, a[href*='twitter'] { background: url('../images/social-s9c30a47a32.png') no-repeat; }
+
+.social-dribbble, a[href*='dribbble'] { background-position: 0 0; }
+
+.social-github { background-position: 0 -24px; }
+
+.social-stackoverflow, a[href*='stackoverflow'] { background-position: 0 -48px; }
+
+.social-twitter, a[href*='twitter'] { background-position: 0 -72px; }
+
+.social { margin: 0; padding: 0; border: 0; overflow: hidden; *zoom: 1; }
+.social li { list-style-image: none; list-style-type: none; margin-left: 0; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; white-space: nowrap; }
+.social li { *display: inline; }
+.social li { margin-right: 1.5em; }
+.social a { display: block; }
+
+a[href*='github'] { background: url('../images/social/github.png?1334968268') no-repeat left; min-height: 24px; padding-left: 30px; }
+
+a[href*='dribbble'] { padding-left: 30px; }
+
+a[href*='stackoverflow'] { padding-left: 30px; }
+
+a[href*='twitter'] { padding-left: 30px; }
+
+.grid-element { min-height: 4.5em; }
+
+.size1of2 { background: #6c71c4; }
+
+.size1of5 { background: #2aa198; }
+
+.size1of3 { background: #cb4b16; }
+
+.full.grid-element { background: #d33682; }
+
+.grid h4 { padding: 0.75em; font-weight: bold; font-style: normal; color: #fdf6e3; }
+
+.susy { *zoom: 1; margin-left: auto; margin-right: auto; width: 21em; max-width: 100%; }
+.susy:after { content: ""; display: table; clear: both; }
+@media (min-width: 40em) { .susy { *zoom: 1; margin-left: auto; margin-right: auto; width: 51em; max-width: 100%; }
+  .susy:after { content: ""; display: table; clear: both; } }
+.lt-ie9 .susy { *zoom: 1; margin-left: auto; margin-right: auto; width: 51em; max-width: 100%; }
+.lt-ie9 .susy:after { content: ""; display: table; clear: both; }
+.susy [role="main"] { padding-bottom: 0; }
+
+.grid { padding: 1.5em 0; *zoom: 1; background: #eee8d5; }
+.grid:after { content: ""; display: table; clear: both; }
+@media (max-width: 40em) { .grid > div { clear: both; margin-left: 4.762%; margin-right: 4.762%; } }
+@media (min-width: 40em) { .grid > .size1of5 { width: 17.647%; display: inline; float: left; margin-right: 1.961%; min-height: 13.5em; }
+  .grid > .size1of5:first-child { margin-left: 1.961%; }
+  .grid > .size1of5 ~ .size1of5 { display: inline; float: right; margin-right: 1.961%; #margin-left: -1em; }
+  .grid .size3of5 { width: 56.863%; display: inline; float: left; margin-right: 1.961%; }
+  .grid .size3of5 > .size1of2 { width: 48.276%; display: inline; float: left; margin-right: 3.448%; }
+  .grid .size3of5 > .size1of2 + .size1of2 { display: inline; float: right; margin-right: 0; #margin-left: -1em; }
+  .grid .size3of5 > .full { clear: both; background: none; }
+  .grid .full .size1of3 { width: 31.034%; display: inline; float: left; margin-right: 3.448%; min-height: 9em; }
+  .grid .full .size2of3 { width: 65.517%; display: inline; float: right; margin-right: 0; #margin-left: -1em; }
+  .grid .size2of3 .size1of2 { width: 47.368%; display: inline; float: left; margin-right: 5.263%; }
+  .grid .size2of3 .size1of2 + .size1of2 { display: inline; float: right; margin-right: 0; #margin-left: -1em; }
+  .grid .size2of3 .full { clear: both; } }
+.lt-ie9 .grid > .size1of5 { width: 17.647%; display: inline; float: left; margin-right: 1.961%; min-height: 13.5em; }
+.lt-ie9 .grid > .size1of5:first-child { margin-left: 1.961%; }
+.lt-ie9 .grid > .size1of5 ~ .size1of5 { display: inline; float: right; margin-right: 1.961%; #margin-left: -1em; }
+.lt-ie9 .grid .size3of5 { width: 56.863%; display: inline; float: left; margin-right: 1.961%; }
+.lt-ie9 .grid .size3of5 > .size1of2 { width: 48.276%; display: inline; float: left; margin-right: 3.448%; }
+.lt-ie9 .grid .size3of5 > .size1of2 + .size1of2 { display: inline; float: right; margin-right: 0; #margin-left: -1em; }
+.lt-ie9 .grid .size3of5 > .full { clear: both; background: none; }
+.lt-ie9 .grid .full .size1of3 { width: 31.034%; display: inline; float: left; margin-right: 3.448%; min-height: 9em; }
+.lt-ie9 .grid .full .size2of3 { width: 65.517%; display: inline; float: right; margin-right: 0; #margin-left: -1em; }
+.lt-ie9 .grid .size2of3 .size1of2 { width: 47.368%; display: inline; float: left; margin-right: 5.263%; }
+.lt-ie9 .grid .size2of3 .size1of2 + .size1of2 { display: inline; float: right; margin-right: 0; #margin-left: -1em; }
+.lt-ie9 .grid .size2of3 .full { clear: both; }

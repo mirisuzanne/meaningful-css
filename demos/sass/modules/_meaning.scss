@@ -1,0 +1,25 @@
+// ---------------------------------------------------------------------------
+// Meaning Settings
+
+$rhythm       : 1.5em;
+$bg           : #d33682;
+$text         : darken($bg,50);
+
+/* ---------------------------------------------------------------------------
+Meaning */
+
+.meaning {
+  @include border-radius(.5em);
+  margin: $rhythm*2 $rhythm/2;
+  padding: $rhythm;
+  background: $bg;
+  color: $text; 
+  > h3 {
+    @include border-top-radius(.5em);
+    margin: - $rhythm;
+    margin-bottom: $rhythm;
+    padding: $rhythm;
+    background: rgba($text,.5);
+    color: $bg; 
+  }
+}

@@ -1,0 +1,29 @@
+/* ---------------------------------------------------------------------------
+Social */
+
+@import "social/*.png";
+@include all-social-sprites;
+
+.social {
+  @include inline-block-list;
+  li { margin-right: rhythm(1); }
+  a { display: block; }
+}
+
+a[href*='github'] {
+  background: image-url('social/github.png') no-repeat left;
+  min-height: image-height('social/github.png');
+  padding-left: image-width('social/github.png') + 6px; 
+}
+
+@mixin social-icons($name) {
+  a[href*='#{$name}'] {
+    @extend .social-#{$name};
+    padding-left: image-width('social/#{$name}.png') + 6px;
+  }
+}
+
+@include social-icons(dribbble);
+@include social-icons(stackoverflow);
+@include social-icons(twitter);
+
