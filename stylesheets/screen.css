@@ -34,7 +34,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* ---------------------------------------------------------------------------
 Root */
-html { background: #fdf6e3 url('../images/noise.png?1333395141') repeat; color: #657b83; min-height: 100%; }
+html { background: #fdf6e3 url('../images/noise.png?1335307239') repeat; color: #657b83; min-height: 100%; }
 
 html { font-size: 100%; line-height: 1.5em; }
 
@@ -168,8 +168,7 @@ Social */
 .social li { *display: inline; }
 .social li { margin-right: 1.5em; }
 .social a { display: block; }
-
-a[href*='github'] { background: url('../images/social/github.png?1334968268') no-repeat left; min-height: 24px; padding-left: 30px; }
+.social a[href*='github'] { background: url('../images/social/github.png?1335307239') no-repeat left; min-height: 24px; padding-left: 30px; }
 
 a[href*='dribbble'] { padding-left: 30px; }
 

@@ -7,13 +7,14 @@ Social */
 .social {
   @include inline-block-list;
   li { margin-right: rhythm(1); }
-  a { display: block; }
-}
-
-a[href*='github'] {
-  background: image-url('social/github.png') no-repeat left;
-  min-height: image-height('social/github.png');
-  padding-left: image-width('social/github.png') + 6px; 
+  a { 
+    display: block; 
+    &[href*='github'] {
+      background: image-url('social/github.png') no-repeat left;
+      min-height: image-height('social/github.png');
+      padding-left: image-width('social/github.png') + 6px; 
+    }
+  }
 }
 
 @mixin social-icons($name) {
