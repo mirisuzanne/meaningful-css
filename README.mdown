@@ -11,10 +11,10 @@ Who I Am
 
 I specialize in creative process, leading teams towards shared goals. I love putting things together: mashups and crossovers.
 
-* Twitter: [eriiicam](http://twitter.com/eriiicam/)
-* Github: [ericam](http://github.com/ericam/)
-* Dribbble: [ericam](http://dribbble.com/ericam/)
-* StackOverflow: [108625](http://stackoverflow.com/users/108625/eric-meyer)
+* Twitter: [@eriiicam][@eric], [@CompassSusy][@susy]
+* Github: [ericam][github]
+* Dribbble: [ericam][dribbble]
+* StackOverflow: [108625][stackoverflow]
 
 [art]: http://eric.andmeyer.com/
 [perform]: http://vicioustrap.com/shows/
@@ -25,6 +25,11 @@ I specialize in creative process, leading teams towards shared goals. I love put
 [compass]: http://compass-style.org/
 [susy]: http://susy.oddbird.net/
 [moztrap]: https://github.com/mozilla/moztrap/
+[@eric]: http://twitter.com/eriiicam/
+[@susy]: http://twitter.com/CompassSusy/
+[github]: http://github.com/ericam/
+[dribbble]: http://dribbble.com/ericam/
+[stackoverflow]: http://stackoverflow.com/users/108625/eric-meyer
 
 What we're talking about
 ------------------------
