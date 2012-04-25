@@ -1,0 +1,859 @@
+Meaningful CSS
+===============================================================================
+
+Who I Am
+--------
+
+* [Multimedia Artist][art]: 
+  [performance][perform], [writing][write], [music][music], etc.
+* Frontend Developer: 
+  [Oddbird][obc], [Mozilla][moztrap], [Sass][sass], [Compass][compass], [Susy][susy], etc.
+
+I specialize in creative process, leading teams towards shared goals. I love putting things together: mashups and crossovers.
+
+* Twitter: [@eriiicam][@eric], [@CompassSusy][@susy]
+* Github: [ericam][github]
+* Dribbble: [ericam][dribbble]
+* StackOverflow: [108625][stackoverflow]
+
+[art]: http://eric.andmeyer.com/
+[perform]: http://vicioustrap.com/shows/
+[write]: http://vicioustrap.com/
+[music]: http://teacupgorilla.com/
+[obc]: http://oddbird.net/
+[sass]: http://sass-lang.com/
+[compass]: http://compass-style.org/
+[susy]: http://susy.oddbird.net/
+[moztrap]: https://github.com/mozilla/moztrap/
+[@eric]: http://twitter.com/eriiicam/
+[@susy]: http://twitter.com/CompassSusy/
+[github]: http://github.com/ericam/
+[dribbble]: http://dribbble.com/ericam/
+[stackoverflow]: http://stackoverflow.com/users/108625/eric-meyer
+
+What we're talking about
+------------------------
+
+I was asked to talk about [Sass][sass], [Compass][compass], and [Susy][susy].
+
+But in order to understand what these tools do, we have to start by talking about why they were built, what problem they solve, and what values are reflected in the solution. 
+
+In 2008, [Natalie Downe][natalie] gave a presentation titled "[CSS Systems][systems]". I never saw that presentation, but those slides formed the basis of Susy, and this is my attempt to revisit her idea 4 years later.
+
+I'm not going to bore you with details, I'm going to tell you why you should care. The details you can learn better on your own time. I'll happily take questions throughout, and I'd love to talk with anyone afterwards.
+
+Check out the [demos][demo].
+
+[natalie]: http://lanyrd.com/profile/natbat/
+[systems]: http://www.slideshare.net/nataliedowne/css-systems-presentation
+[demo]: http://ericam.github.com/meaningful-css/
+
+Summary
+-----------
+
+CSS Systems:
+
+* Vocabulary
+* Organization
+* Libraries & Frameworks
+
+Guiding Principles (Embrace the medium):
+
+* Write _meaningful code_.
+* Join the _community_. 
+* Design for _differences_.
+
+Tools:
+
+* Sass (meaning)
+* Compass (community)
+* Susy (change)
+
+Systems
+===============================================================================
+
+Why you need them.
+------------------
+
+* work as a team
+* write robust & versatile code
+* on tight deadlines
+* hand it off to other developers
+* maintain it over several years
+* do it all again
+
+Every day we are faced with the problems of the end user. We're usually working with a team of developers to write code that will work across a shifting landscape of browsers, devices, networks, and users; all on a tight deadline. In the end we'll pass it off to someone else, or return and maintain it ourselves. Then we start over and do it all again.
+
+What they are.
+--------------
+
+A System, to paraphrase Natalie, is:
+
+* Shared vocabulary, patterns, and code.
+* Consistent across all your projects.
+* Customized for each.
+* Overall structure + individual components.
+
+Developing systems to help us manage these constraints is not a new idea. Grid frameworks (960/Blueprint), resets, and style guides are just part of the picture, but lately we're seeing more robust systems:
+
+* [OOCSS][oocss]: Nicole Sullivan
+* [Bootstrap][bootstrap]: Twitter
+* [SMACSS][smacss] Jonathan Snook
+* [HTML5 Boilerplate][html5pb]: Paul Irish, Divya Manian, etc.
+
+All of these are worth studying, and you can see elements from each in the Systems I'll be talking about today. They cover more than simply grids:
+
+* Markup
+* Vocabulary
+* Resets / normalization
+* Organization
+* Shared libraries & patterns: layout & grids, type, icons, buttons, forms...
+* Responsive elements
+* Browser fallbacks (IE)
+
+[oocss]: http://oocss.org/
+[bootstrap]: http://twitter.github.com/bootstrap/
+[smacss]: http://smacss.com/
+[html5bp]: http://html5boilerplate.com/
+
+Build your own.
+---------------
+
+Don't take my word for it, write it for yourself. The system that you use should make sense to you. Study them all, and build your own from the parts that make sense. It's important to understand every aspect of your system. 
+
+* Start with guiding _principles_.
+* Consider the _process_ that your system will fit into.
+* Extract coding _patterns_ that can be reused.
+* _Define_ the vocabulary, patterns, and shared libraries.
+* _Develop_ and maintain it as a project of it's own, without a deadline.
+* _Communicate_ it clearly to collaborators, on hand-off, and to the community.
+
+Guiding Principles: Embrace the medium.
+===============================================================================
+
+Embrace what?
+-------------
+
+You have to write differently for a novel than you do for a movie. You act differently on film than on stage. It's important to know the strengths and weaknesses of your medium before you start to work. In our case, there are several aspects of the medium we need to look at.
+
+* The World Wide Web
+* HTML
+* CSS
+
+Embrace the Web
+---------------
+
+The W3C vision of "One Web" states two key points:
+
+* Web for All
+* Web on Everything
+
+Web design is a conversation with the user, and any attempts to dominate the conversation is counter to the medium. Have you met people? People are queer. All of them. There is no normal. There's only the range of options. The web is built on that same principle. Get used to it and begin to nurture the chaos. Design for difference and change.
+
+That's one of our principles. What a lucky coincidence.
+
+Standards
+---------
+
+If the web isn't held together by a target user, a target access point, or a target device, what does hold it together?
+
+We do. Together. All of us that help to build it.
+
+* Content creators
+* Web technology developers
+* Site & app developers
+* Browser developers
+
+and so on. We're all building it together, and it's unified by the standards we agree to. That process is distributed and chaotic, but it's a process. If you want to be a part of the web, you need to be a part of the community.
+
+That's another of our principles. Look how lucky we are.
+
+Embrace HTML
+------------
+
+HTML is the core of the web. The purpose of HTML is simple: add extra meaning to content. That's done through a combination of semantics (which provide reason) and linking (which provides relationships). This extra meaning is useful both to machines and humans.
+
+That's our final principle. I'm starting to see a pattern.
+
+Embrace CSS
+-----------
+
+CSS split off from HTML around the time I was first learning web design. Presentation was cluttering the semantic use of HTML, and required a layer of it's own. Features aside (we'll get to that), CSS has three fundamental principles:
+
+* The Flow: Rules for default element layout on the page.
+* Inheritance: How properties trickle down from an element to its children.
+* Cascade: What take precedence when there is a conflict.
+
+Don't fight these fundamentals. Use them. CSS related to HTML through selector 'hooks' that allow different levels of abstraction, and we can control the cascade through use of specificity and code order.
+
+* HTML tags
+* DOM outline
+* Classes
+* IDs
+
+The better we can separate and abstract that connection, the more flexibility we have to let each layer focus on what it does best. The contact between HTML and CSS should be minimal, and take advantage of flow, inheritance and the cascade.
+
+Guiding Principles: Write meaningful code.
+===============================================================================
+
+What is CSS?
+------------
+
+CSS is a very simple language:
+
+* Selectors
+* Properties
+* Values
+* The Cascade 
+
+That is getting extremely complex (CSS3):
+
+* 33 new selectors
+* 120+ new properties
+* 3 new @-rules
+* Enhanced Media Queries
+
+We're building castles out of toothpicks.
+
+Why do we use CSS?
+------------------
+
+* Split from HTML, to make both more meaningful.
+* CSS is a layer of abstraction for style.
+
+Why stop there?
+---------------
+
+For some reason, after seeing the need to abstract CSS out from HTML, the w3c has made every effort reject further abstraction within CSS. 
+
+> Adding any form of macros or additional scopes and indirections, including symbolic constants, is not just redundant, but changes CSS in ways that make it unsuitable for its intended audience. Given that there is currently no alternative to CSS, these things must not be added. 
+- [Bert Boss](http://www.w3.org/People/Bos/CSS-variables), June 2008
+
+Meaning > Simplicity
+--------------------
+
+Who are these mythical developers don't understand abstraction?
+
+Simple:
+
+```css
+.article {
+  float: left;        
+  display: inline;    
+  width: 31.707%;     
+  margin-right: 2.439%;
+}
+```
+
+Meaningful:
+
+```scss
+.article {
+  @include columns(2);
+}
+```
+
+When we talk about abstraction in code, we are usually adding meaning, not taking it away.
+
+CSS lacks meaning
+-----------------
+
+CSS has three major "Meaning" problems:
+
+* Reason
+* Repetition
+* Relationships
+
+> Dear W3C, We rely on advanced text editors, calculators, color pickers and widgets to make writing CSS bearable. Throw us a frickin' bone!
+- [Duško Angirević ‏(@dysko)](https://twitter.com/#!/dysko/statuses/173037423520002048), Feb 2012
+
+How do you solve these problems? You do what any elementary math teacher would tell you too do: show your work. 
+
+Meet Sass
+---------
+
+Syntactically Awesome Style Sheets
+
+```css
+.cat {
+  background: url('cat.png');
+}
+```
+
+```scss
+.cat {
+  background: url('cat.png');
+}
+```
+
+Sass is a _direct superset of CSS_. All the CSS you have ever written is already valid Sass, just add the `.scss` extension (Sassy CSS). Sass brings abstractions, logic, and meaning to the code. It will get translated into well-formatted, standard CSS using a compiler.
+
+([Sass][sass] is a project of Hampton Catlin, Nathan Weizenbaum, and Chris Eppstein.)
+
+Debugging
+---------
+
+```css
+/*
+Syntax error: Invalid CSS after "  color": expected ";", was ": #fdf6e3;"
+        on line 22 of screen.scss
+*/
+```
+
+This gives us the added bonus of debugging for syntax errors.
+
+Meaningful Selectors
+--------------------
+
+```css
+/* nesting: css */
+
+.nesting p { 
+  margin: .75em; 
+}
+.nesting > h3 {
+  color: #d33682; 
+}
+.nesting:target {
+  color: #fff; 
+}
+.no-rgba .nesting {
+  color: #000; 
+}
+```
+```scss
+/* nesting: scss */
+
+.nesting { 
+  p { margin: .75em; }
+  > h3 { color: #d33682; }
+  &:target { color: #fff; }
+  .no-rgba & { color: #000; }
+}
+
+```css
+/* extending: css */
+.demo, .meaning, .article {
+  padding: 1.5em;
+}
+```
+```scss
+/* extending: scss */
+.demo { padding: 1.5em; }
+.meaning { @extend .demo; }
+.article { @extend .demo; }
+```
+
+Meaningful @Media
+-----------------
+
+```css
+/* @media: css */
+
+.meaning { 
+  padding: 1.5em; 
+}
+
+@media (min-width: 30em) {
+  .meaning { 
+    padding: 0.5em;  
+  }
+}
+```
+```scss
+/* @media: scss */
+
+.meaning { 
+  padding: 1.5em; 
+  @media (min-width: 30em) { 
+    padding: 0.5em; 
+  }
+}
+```
+
+Meaningful Properties
+---------------------
+
+```css
+/* mixin: css */
+
+.meaning { 
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+}
+```
+```scss
+/* mixin: scss */
+
+.meaning { 
+  @include border-radius(.5em); 
+}
+```
+
+Meaningful Values
+-----------------
+
+```
+/* variables: css */
+
+.meaning {
+  padding: .75em;
+  background: #d33682;
+  color: #080205; 
+}
+
+.meaning > h3 {
+  margin: -.75em;
+  margin-bottom: .75em;
+  padding: .75em;
+  background: rgba(8,2,5,0.5);
+  color: #d33682; 
+}
+```
+```
+/* variables: scss */
+
+$rhythm     : 1.5em;
+$padding    : $rhythm / 2;
+$bg         : #d33682;
+$text       : darken($bg,50);
+
+.meaning {
+  padding: $padding;
+  background: $bg;
+  color: $text; 
+  > h3 {
+    margin: - $padding;
+    margin-bottom: $padding;
+    padding: $padding;
+    background: rgba($text,.5);
+    color: $bg; 
+  }
+}
+```
+
+Meaningful Organization
+-----------------------
+
+```scss
+/* _reset.scss -------- */
+.reset { ... } 
+
+/* _layout.scss ------- */
+.layout { ... } 
+
+/* _module.scss ------- */
+.module { ... } 
+
+/* screen.scss -------- */
+@import “reset”;
+@import “layout”;
+@import “module”;
+```
+
+The future of CSS
+-----------------
+
+This may all be changing. We now have a CSS Variables draft, thanks to Tab Atkins! Variables written directly in CSS will be more powerful than Sass, because they will have access to the DOM. It's hard to know where all that might lead.
+
+How did we get to that point? People asked for it, and created to preprocessors as a testing ground. They explored and shared and put pressure on the w3c. It takes a community. 
+
+Guiding Principles: Join the community.
+===============================================================================
+
+Open source & the front end
+---------------------------
+
+Concepts like version control, object oriented programming, open source software, module tools, and DRY coding have a long history for programmers, but it's only recently that front-end developers have started to wade in. 
+
+Writing code that is part of a broader community holds us all to higher standards, allows us to build on the work of others, and lowers the barrier of entry. Experts build the tools that beginners use, and we are all able to write better code more quickly.
+
+See jQuery for example. JavaScript used to be difficult. Now any beginner can throw together interactions and animations on their first attempt. You even have options: the pre-rolled jQuery UI with design and markup included, or the completely flexible and modular jQuery core.
+
+Compass: jQuery for CSS
+-----------------------
+
+That's where Compass comes in. Compass is an open-source CSS Authoring Framework for Sass. It provides the architecture for building, sharing, and importing sass modules. It also provides a complete library of reusable helpers and patterns built on web best-practice.
+
+([Compass][compass] is a project of Chris Eppstein, Brandon Mathis, Eric Meyer (me), Anthony Short, Scott Davis, and Nico Hagenburger.)
+
+Context Awareness
+-----------------
+
+```rb
+# config.rb -------------------/
+
+http_path = "/"
+css_dir = "stylesheets"
+sass_dir = "sass"
+images_dir = "images"
+fonts_dir = "fonts"
+javascripts_dir = "js"
+
+output_style = :compact
+relative_assets = true
+line_comments = false
+```
+```scss
+/* scss --------------------- */
+
+a[href*='github'] {
+  display: block;
+  background: image-url('github.png') no-repeat left;
+  min-height: image-height('github.png');
+  padding-left: image-width('github.png') + 6px; 
+}
+```
+```css
+/* css ---------------------- */
+
+a[href*='github'] { display: block; 
+  background: url('../images/github.png?1334968268') no-repeat left;  
+  min-height: 24px; padding-left: 30px;}
+```
+
+Compass starts by adding environmental-awareness to Sass. With a few simple settings, Compass knows your URL structure and where all your assets live: including sass files, css output files, html, javascript, images, fonts, and so on. 
+
+Sprites
+-------
+
+```scss
+/* File Structure --------------
+
+images/
+  social/
+    dribbble.png
+    github.png
+    twitter.png
+
+------------------------------*/
+
+/* scss ----------------------*/
+
+@import "social/*.png";
+@include all-social-sprites;
+```
+```css
+/* css ---------------------- */
+.social-sprite, .social-dribbble, .social-github, .social-twitter { 
+  background: url('../images/social-s9c30a47a32.png') no-repeat; 
+}
+.social-dribbble { 
+  background-position: 0 0; 
+}
+.social-github { 
+  background-position: 0 -24px;
+}
+.social-twitter { 
+  background-position: 0 -72px;
+}
+```
+
+Nico Hagenburger developed a great plugin for CSS sprites. Sprites are a major pain in the ass to create, code, and maintain, but Nico has made the process nearly magical. Now he's on the Compass team, and all that magic has been rolled into the Compass core.
+
+Modules
+-------
+
+Compass includes sass helpers and mixins for many common css problems.
+
+* CSS3.
+  Animations, Appearance, Background Clip, Background Origin, Background Size, Border Radius,  Box Shadow, Box Sizing, CSS3 Pie, Columns, Font Face, Images, Inline Block, Opacity, Shared Utilities, Text Shadow, Transform, Transition, and User Interface.
+* Helpers.
+  Color functions, math, browser-support, and asset handling.
+* Layout.
+  Grid Background, Sticky Footer, and Stretching.
+* Reset [Eric Meyer].
+* Typography.
+  Links, Lists, Text, and Vertical Rhythm.
+* Utilities.
+  Color, General, Print, Sprites, and Tables.
+* Plugins...
+
+Compass + Systems
+-----------------
+
+The Compass community is large and growing constantly. If there is a new CSS system around, the chances are it has been ported to compass as a plugin.
+
+* CSS Systems       -> Susy
+* OOCSS             -> Several
+* Bootstrap         -> Several
+* SMACSS            -> Nothing to port, just do it!
+* HTML5BP           -> Several
+
+Resets, normalizations, typography presets, form-helpers, image-helpers, css PIE, modernizr, and on and on. 
+
+With tools like that, it's easier than ever to build and maintain your system, taking advantage of all the patterns and best practices around the web. But how do you know which practices to use?
+
+Running Compass
+---------------
+
+* [Command Line](http://compass-style.org/help/tutorials/command-line/)
+* [LiveReload](http://livereload.com/)
+* [fire.app](http://fireapp.handlino.com/)
+* [compass.app](http://compass.handlino.com/)
+* [codekit](http://incident57.com/codekit/)
+
+Guiding Principles: Design for differences.
+===============================================================================
+
+The Dao of web design
+---------------------
+
+> The control which designers know in the print medium, and often desire in the web medium, is simply a function of the limitation of the printed page. We should embrace the fact that the web doesn’t have the same constraints, and design for this flexibility. But first, we must “accept the ebb and flow of things.”
+- [John Allsopp](http://www.alistapart.com/articles/dao/), April 2000 
+
+The web is responsive
+---------------------
+
+The web is responsive. It doesn't matter what technique you use, the web will make changes to your design. It's your choice how to deal with that. Plan for it, ignore it, or fight it.
+
+Planning for it means we have to take risks, and build for flexibility. Stop pretending to know the optimal width, optimal height, optimal font size, and so on. Users aren't optimal, they are custom. Treat each one with respect.
+
+Sometimes that feels like a weakness of the medium, because we are forced to give up our control and our assumptions. Don't let it be a weakness, take control of the chaos and make it a strength. Different technologies, different sizes, different users, different opportunities.
+
+A system of my own
+===============================================================================
+
+Responsive process
+------------------
+
+So here we are, ready to start a project. We have our constraints and principles in mind. Now what?
+
+I'm going to run through the entire process as though I were working alone. Adding a team doesn't change the steps we need to go through, only who is doing each part.
+
+1. Content
+----------
+
+We need content, and we need it organized. Lucky for us, the medium has that built in. Set up static page templates and give them urls. It can be helpful to start with some ready-to-go HTML templates. I recommend starting with HTML5 Boilerplate and making any changes you need.
+
+Create realistic content, no lorem ipsum. Don't think about design. Only structure. Create a web of text document outlines, each page a single block of text. Use markdown or similar to organize it and make changes quickly. Look at the content on each page and prioritize it. 
+
+* What comes first? 
+* What's important? 
+* What can we get rid of?
+* Where do we go next?
+
+Link the pages together. Create a web of content and click around. 
+
+* Where do we get stuck?
+* What's hard to find?
+
+Fix it. 
+
+When it's time to deliver to our client or boss or both, it's already online. Send them a link. Let them click around. Repeat until everyone is happy.
+
+2. Markup
+---------
+
+When we're done with step one, we're almost done with step two as well. Convert the markdown to markup, clean it up, and look for patterns. 
+
+Add important meta-data, and we're good to go. It's helpful to have a naming scheme in place, like SMACSS or OOCSS to help us work fast and provide useful hooks. Both SMACSS and OOCSS can be simplified using Sass @extend.
+
+Don't worry, we can come back here if we need to.
+
+3. Wireframes
+-------------
+
+Hell, we already have all our content templates marked-up in the browser. Why not wireframe in the browser as well?
+
+What if we're working with an architect who doesn't write CSS? We work with them. We code from their sketches, asking questions along the way. We don't need to have all our ideas in the browser, we just have to move them to the browser eventually.
+
+Aside: Layout, grids, and Susy
+------------------------------
+
+Demo: fluid center, candy shell.
+
+We don't have a design yet, so don't let the wireframes get out of control. Use a grid system to help move the components around quickly. Use percentages for all the grid internals, so you can make changes to the size of the overall grid with one single change to the container.
+
+```css 
+/* ------------------------------------------------------------- 
+Span 6 columns of a 10-column grid... */
+
+article { 
+  float: left;           /* establish a column */
+  display: inline;       /* fix double-margin bug */
+  width: 56.863%;        /* (((6*4em)+((6-1)*1em))/51em)*100% */
+  margin-right: 1.961%;  /* (1em/51em)*100% */
+}
+```
+```scss
+/* ------------------------------------------------------------- 
+Span 6 columns of a 10-column grid... */
+
+article { 
+  @include columns(6);
+}
+```
+
+The math for grids is difficult already, and fluid grids are even worse. We're on a deadline, so that's why I built Susy. Susy builds fluid grids in any container, all with modular sass functions and mixins, so we never have to change the markup.
+
+```scss
+/* A Simple Susy Grid --------------------------------------- */
+
+$total-cols        : 10;
+
+.page { 
+  @include container;
+}
+
+header, footer { 
+  @include full;
+}
+
+nav { 
+  @include columns(4);
+  @include alpha;
+}
+
+article { 
+  @include columns(6);
+  @include omega;
+}
+```
+
+For the best balance of designer control and user flexibility, I highly recommend the fluid/elastic option. Fluid grids respond to viewport changes, while the elastic shell gives us control over the typographic line length no matter how the user adjusts their font size. 
+
+But we can do even better than that in the responsive department. Why not use a mobile-first approach, and establish some reasonable breakpoints? The new version of Susy, which will hit beta in the next week, adds media-queries to the mix without any hassle.
+
+```scss
+/* Susy 1.0 Coming Soon ------------------------------------- */
+
+.page { @include container(4,10); }
+
+header, footer { 
+  @include at-breakpoint(10) { @include full; };
+}
+
+@include at-breakpoint(10) { 
+  nav {
+    @include columns(4 alpha);
+  }
+  article { 
+    @include columns(6 omega);
+  }
+};
+```
+
+With a few lines of meaningful code, we already have a layout that is robust and responsive across browsers. Now that's a wireframe I can believe in.
+
+Aside: Organizing your CSS
+--------------------------
+
+1. Base - Sass with no output
+  * Settings - Variables for colors, grids, fonts, plugins, extensions, etc.
+  * Extensions - Sass modules with functions and mixins to use later.
+2. General
+  * Reset - Eric Meyer
+  * Defaults - By type of element
+  * Helpers - Classes to @extend
+3. Layouts - Wireframes
+4. Modules
+  * Classes - By effect they create
+  * ID's - By component they affect
+5. Overrides
+  * Sections
+  * Pages
+
+Use the cascade for organization, lowest to highest specificity.
+
+1. Components, not pages
+2. Type of thing, not individual thing
+3. Prefer classes to IDs
+
+(from Natalie)
+
+base/
+  settings/
+    _grid.scss
+    _colors.scss
+    _fonts.scss
+  extensions/
+    _foo.scss
+general/
+  _reset.scss
+  _defaults.scss
+  _helpers.scss
+layout/
+  _layout.scss
+modules/
+  effects/
+    _dropdown.scss
+  components/
+    _news.scss
+overrides/
+  _admin.scss
+  _home.scss
+
+Use Sass partials, and expand each section as needed. We can even nest imports to help segment our code. Keep specificity as low as possible in each section, so the following section can easily override what it needs to.
+
+Sections 1 & 2 might be good candidates for boilerplate. A few basic typographic styles that just keep our content templates looking nice until we get around to wireframing. We can always make project-specific changes when we're ready.
+
+Don't forget to document as you go. I recommend starting with the KSS format to keep you clear, concise, and consistent. 
+
+4. Design
+---------
+
+When we talk about "designing in the browser", the point isn't that we shun our favorite design tools forever. We use whatever tools help us design. Use the browser, use Adobe, use pen and paper and spray paint. Do whatever it takes, but always bring it back to the browser. The browser is where we put things together and show it to clients and bosses.
+
+5. Cleanup
+----------
+
+If we haven't already along the way, it's time to focus on browser support, fallback styles, and progressive enhancement. Using conditional comments for Internet Explorer, and Modernizr for feature detection, we can do all our cleanup in-context with Sass's handy parent selector, avoiding both hacks and additional stylesheets to maintain.
+
+```scss
+/* feature support with sass */
+
+article { 
+  @include box-sizing(border-box);
+  width: 45%;
+  padding: 2%;
+
+  .no-boxsizing & {
+    width: 41%;
+    padding: 2%; 
+  }
+}
+```
+
+```html
+<!doctype html>
+<!--[if lt IE 8]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9">        <![endif]-->
+<!--[if gt IE 8]><!--> <html>              <!--<![endif]-->
+```
+```scss
+/* ie fallbacks with sass */
+
+.container { 
+  width: 20em;
+
+  @media (min-width:50em) { width: 50em; }
+  .lt-ie9 & { width: 50em; }
+}
+```
+
+That's all folks
+===============================================================================
+
+Review
+------
+
+We have the start of a system, based on three fundamental principles of the web: write meaningful code, as a community, embracing change. We have frameworks, libraries, vocabulary, and a process. 
+
+We got it started, now take it home, flesh it out, and share your work. Fill in all the details for your team, then compare your notes with the internet. That's how best practice is born.
+
+* Define it.
+* Maintain it.
+* Communicate it.
+
+_Thank You_.
+
+Other resources
+---------------
+
+* [35 Great Resources for Compass and Sass](http://fuelyourcoding.com/35-great-resources-for-compass-and-sass/)
+* [The Sass Way](http://thesassway.com/)
+* [Compass Google Group](groups.google.com/group/compass-users)
