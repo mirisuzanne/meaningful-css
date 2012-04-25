@@ -297,6 +297,7 @@ Debugging
 /*
 Syntax error: Invalid CSS after "  color": expected ";", was ": #fdf6e3;"
         on line 22 of screen.scss
+*/
 ```
 
 This gives us the added bonus of debugging for syntax errors.
